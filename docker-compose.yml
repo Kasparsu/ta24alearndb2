@@ -7,3 +7,17 @@ services:
       - 8000:80
     volumes:
       - ./html:/usr/local/apache2/htdocs
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+    volumes:
+      - ta24alearndbdata:/var/lib/mysql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+  ta24alearndbdata:
