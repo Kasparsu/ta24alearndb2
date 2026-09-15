@@ -12,6 +12,8 @@ services:
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: example
+    ports:
+      - 33061:3306
     volumes:
       - ta24alearndbdata:/var/lib/mysql
   adminer:
