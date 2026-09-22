@@ -12,6 +12,7 @@ services:
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: example
+      MARIADB_DATABASE: project
     ports:
       - 33061:3306
     volumes:
